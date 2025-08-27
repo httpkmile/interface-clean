@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>interfaceEL</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  </head>
+  <body>
+    
+      <h1 Id="recepcaoinicial">mesage</h1>
+      <div>
+      <script>
+    
+        var hora= new Date().getHours();
+        var mesage;
+        if (hora < 6) {
+            mesage= "Boa madrugada, Eduardo Leal."; {
+        } else if (hora >=6 && <= 11){
+            mesage= "Bom dia, Eduardo Leal.";  
+        } else if (hora >=12 && <= 17){
+            mesage= "Boa tarde, Eduardo Leal."; 
+        } else {
+            mesage= "Boa noite, Eduardo Leal.";
+        }
+      }
+
+
+        document.getElementById("recepcaoinicial").innerHTML=mesage;
+
+      </script>
+
+
+      <input class="user" placeholder="ID" required />
+
+      <input class="password" placeholder="PIN" required />
+
+
+        <i data-lucide="fingerprint" class="icon-fingerprint"></i></div>
+     
+      <script>
+        lucide.createIcons();
+      </script>
+
+     
+
+      <button>enter</button>
+    </div>
+    <svg
+      class="icon"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="#c5c9dd"
+      stroke-width="1"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="lucide lucide-user-lock-icon lucide-user-lock"
+    >
+      <defs>
+        <linearGradient id="gradStroke" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#60aaeb">
+            <animate
+              attributeName="offset"
+              values="0;1;0"
+              time="4s"
+              repeat="indefinido"
+            />
+          </stop>
+          <stop offset="100%" stop-color="#f2f5f6">
+            <animate
+              attributeName="offset"
+              values="1;0;0"
+              time="4s"
+              repeat="indefinido"
+            />
+          </stop>
+        </linearGradient>
+      </defs>
+
+      <circle cx="10" cy="7" r="4" stroke="url(#gradStroke)" />
+      <path d="M10.3 15H7a4 4 0 0 0-4 4v2" stroke="url(#gradStroke)" />
+      <rect width="8" height="5" x="13" y="16" rx=".900" />
+      <path d="M15 15.5V14a2 2 0 0 1 4 0v1.5" stroke="url(#gradStroke)" />
+    </svg>
+  </body>
+</html>
