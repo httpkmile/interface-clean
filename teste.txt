@@ -1,4 +1,0 @@
-original row alterado localmente teste
-alteração da remota novamente
-alterando o remoto para mesclar com o local1
-alterando o local para mesclar com remoto
