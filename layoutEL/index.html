@@ -9,6 +9,7 @@
   </head>
 
   <body>
+<<<<<<< HEAD
     <h1 id="recepcaoinicial">mesage</h1>
     <h2 id="recepcaodois">Acesse o seu gerenciador de senhas</h2>
 
@@ -24,6 +25,24 @@
         mesage = "Boa tarde, usuário.";
       } else {
         mesage = "Boa noite, usuário.";
+=======
+    
+      <h1 Id="recepcaoinicial">mesage</h1>
+      <div>
+      <script>
+    
+        var hora= new Date().getHours();
+        var mesage;
+        if (hora < 6) {
+            mesage= "Boa madrugada, usuário."; {
+        } else if (hora >=6 && <= 11){
+            mesage= "Bom dia, usuário.";  
+        } else if (hora >=12 && <= 17){
+            mesage= "Boa tarde, usuário."; 
+        } else {
+            mesage= "Boa noite, usuário.";
+        }
+>>>>>>> 07ece4ce4d0af9731c8d5badad94f381a56d4e97
       }
 
       console.log(mesage);
