@@ -7,46 +7,55 @@
     <link rel="stylesheet" href="style.css" />
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
   </head>
+
   <body>
-    
-      <h1 Id="recepcaoinicial">mesage</h1>
-      <div>
-      <script>
-    
-        var hora= new Date().getHours();
-        var mesage;
-        if (hora < 6) {
-            mesage= "Boa madrugada, Eduardo Leal."; {
-        } else if (hora >=6 && <= 11){
-            mesage= "Bom dia, Eduardo Leal.";  
-        } else if (hora >=12 && <= 17){
-            mesage= "Boa tarde, Eduardo Leal."; 
-        } else {
-            mesage= "Boa noite, Eduardo Leal.";
-        }
+    <h1 id="recepcaoinicial">mesage</h1>
+    <h2 id="recepcaodois">Acesse o seu gerenciador de senhas</h2>
+
+    <script>
+      var hora = new Date().getHours();
+      var mesage;
+
+      if (hora < 6) {
+        mesage = "Boa madrugada, usuário.";
+      } else if (hora >= 6 && hora <= 11) {
+        mesage = "Bom dia, usuário.";
+      } else if (hora >= 12 && hora <= 17) {
+        mesage = "Boa tarde, usuário.";
+      } else {
+        mesage = "Boa noite, usuário.";
       }
 
+      console.log(mesage);
+      document.getElementById("recepcaoinicial").innerHTML = mesage;
+    </script>
 
-        document.getElementById("recepcaoinicial").innerHTML=mesage;
+    <div >
+      <div class="input-user">
+        <input  type="text" class="user" placeholder="ID" required />
+        <i data-lucide="fingerprint" class="icon-fingerprint"></i>
+      </div>
 
-      </script>
+      <div class="input-pass">
+        <input type="password" class="password" placeholder="Senha" required />
+        <i data-lucide="fingerprint" class="icon-fingerprint"></i>
+      </div>
 
-
-      <input class="user" placeholder="ID" required />
-
-      <input class="password" placeholder="PIN" required />
-
-
-        <i data-lucide="fingerprint" class="icon-fingerprint"></i></div>
-     
-      <script>
-        lucide.createIcons();
-      </script>
-
-     
-
-      <button>enter</button>
+      <div class="remember-fgt">
+        <label> <input type="checkbox" /> Lembre-se de mim. </label>
+        <a href="#">Esqueci minha senha</a>
+      </div>
     </div>
+
+    <div>
+      <button type="submit">Entrar</button>
+    </div>
+
+    <script>
+      lucide.createIcons();
+    </script>
+
+    <!-- Ícone do usuário -->
     <svg
       class="icon"
       xmlns="http://www.w3.org/2000/svg"
@@ -56,7 +65,6 @@
       stroke-width="1"
       stroke-linecap="round"
       stroke-linejoin="round"
-      class="lucide lucide-user-lock-icon lucide-user-lock"
     >
       <defs>
         <linearGradient id="gradStroke" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -64,16 +72,16 @@
             <animate
               attributeName="offset"
               values="0;1;0"
-              time="4s"
-              repeat="indefinido"
+              dur="4s"
+              repeatCount="indefinite"
             />
           </stop>
           <stop offset="100%" stop-color="#f2f5f6">
             <animate
               attributeName="offset"
               values="1;0;0"
-              time="4s"
-              repeat="indefinido"
+              dur="4s"
+              repeatCount="indefinite"
             />
           </stop>
         </linearGradient>
@@ -84,5 +92,30 @@
       <rect width="8" height="5" x="13" y="16" rx=".900" />
       <path d="M15 15.5V14a2 2 0 0 1 4 0v1.5" stroke="url(#gradStroke)" />
     </svg>
+
+    <!-- Cubo SVG -->
+    <svg
+      class="cube"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 512 512"
+      width="120"
+      height="120"
+    >
+      <path
+        d="M256 400c40-10 80 0 110-20s50-50 60-90-0-80-20-110-50-50-90-60-80 0-110 20-50 50-60 90 0 80 20 110 50 50 90 60z"
+        fill="#7a95b8"
+      />
+      <polygon
+        fill="#B4D8F1"
+        points="480,112 256,0 32,112 32,400 256,512 480,400"
+      />
+      <polygon
+        fill="#98C8ED"
+        points="256,224 32,112 32,400 256,512 480,400 480,112"
+      />
+      <polygon fill="#7AB9E8" points="256,224 256,512 480,400 480,112" />
+    </svg>
+
+    <!-- Configurações SVG -->
   </body>
 </html>
